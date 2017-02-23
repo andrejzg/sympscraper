@@ -3,6 +3,7 @@ package com.babylonhealth.sympscraper.extractor;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -21,7 +22,8 @@ import com.babylonhealth.sympscraper.cleaner.CleanerUtil;
  */
 public class SimpleSymptomExtractor implements Extractor {
 
-	private final String SYMPTOMS_FILENAME = "resources/symptoms.txt";
+	private final String SYMPTOMS_FILENAME = "/symptoms.txt";
+//			this.getClass().getClassLoader().getResource("symptoms.txt").getFile();
 	private final Set<String> symptoms;
 
 	public SimpleSymptomExtractor() {
@@ -29,7 +31,7 @@ public class SimpleSymptomExtractor implements Extractor {
 
 		// Read in symptoms into the hash set
 		try {
-			BufferedReader br = new BufferedReader(new FileReader(SYMPTOMS_FILENAME));
+			BufferedReader br = new BufferedReader(new InputStreamReader(getClass().getResourceAsStream(SYMPTOMS_FILENAME)));
 			String line;
 			while ((line = br.readLine()) != null) {
 				symptoms.add(line);
