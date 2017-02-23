@@ -29,7 +29,6 @@ $ java -jar sympscraper-0.0.1.jar -i my_urls.txt
 4. cd into 'target/'
 5. Run `$ java -jar sympscraper-0.0.1-jar-with-dependencies.jar -u http://www.nhs.uk/Conditions/Glue-ear/Pages/Symptoms.aspx`.1
 1. Download this repository to a local machine.
-To build from source, download the repository to a local machine and run `mvn build`.
 
 ## How sympscraper works
 
@@ -70,3 +69,5 @@ The problem with symptom entities is that:
 A more principled solution would deduplicate symptoms using something akin to WordNet synsets.
 
 A way of training a model to detect symptoms in text might be to use a list of symptoms to highlight symptoms in as much text as possible and thus 'seed' a training set with with a model could be trained to extract symptoms in a way similar to named entity recognition. 
+
+Existing Stanford Core NLP NER tags do not capture medical symptoms. Nor is there any discernible parse pattern that could be used to extract symptoms. 
