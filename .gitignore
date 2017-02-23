@@ -1,9 +1,6 @@
 target/
-.project
 *.log
 *.class
 *.jar
 /.settings
-/.settings
-/.classpath
 /bin/
