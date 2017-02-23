@@ -1,4 +1,4 @@
-package com.babylonhealth.extractor.scraper.scraper;
+package com.babylonhealth.sympscraper.test;
 
 import static org.junit.Assert.assertEquals;
 
