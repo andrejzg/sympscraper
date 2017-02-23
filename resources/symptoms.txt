@@ -2,3 +2,139 @@ frightened
 hallucination
 difficulty breathing
 frightened
+obsession
+anxiety
+compulsion
+harming yourself
+hoarding
+thick neck
+swelling
+kidney abnormalities
+heart conditions
+sadness
+hopeless
+low self esteem
+tearful
+irritable
+anxious
+suicidal
+constipation
+aches
+ache
+pains
+disturbed sleep
+depression
+tired
+irritability
+irregular surface 
+painful
+round
+nausea
+sweating
+lightheadedness
+stiff
+breathlessness
+light headedness
+fainting
+chest pain
+lethargy
+firm
+raised
+abdominal pain
+back pain
+chest pain
+earchache
+headache
+chronic pelvic pain
+toothache (ache)
+vaginal pain
+rectal pain
+dermatotal pain
+chills
+fever
+numbness
+tingling
+light headed
+dizzy
+tremor
+dry mouth
+sick
+sleepy
+sweaty
+thirsy
+tired
+weak
+discharge
+bleeding
+swelling
+deformity
+sweats
+acalculia
+acrophobia
+agnosia
+agoraphobia
+akathisia
+akinesia
+alexia
+amusia
+anhedonia
+anomia
+anosognosia
+anxiety
+apraxia
+arachnophobia
+ataxia
+bradykinesia
+chorea
+claustrophobia
+confusion
+homicidal ideationabrasion
+alopecia
+anasarca
+blister
+edema (R60)
+hirsutism
+itching
+laceration
+paresthesia
+rash
+urticaria
+suicidal ideation
+tic
+tremor
+deliberate self harm and drug overdose
+depression
+dysarthria
+dysdiadochokinesia
+dysgraphia
+dystonia
+euphoria
+prosopagnosia
+sciatica
+hallucination
+paralysis
+paranoia or persecution
+dysuria
+hematuria
+impotence 
+polyuria 
+retrograde ejaculation
+strangury
+urinary frequency
+urinary incontinence
+urinary retention
+paresthesia
+hypoventilation
+infertility
+pelvic pains
+flatulance
+hyperventilation
+bradypnea (R06.0)
+apnea
+cough
+dyspnea
+hemoptysis
+pleuritic chest pain
+sputum production
+tachypnea
+headache

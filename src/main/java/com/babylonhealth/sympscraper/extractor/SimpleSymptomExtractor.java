@@ -19,12 +19,12 @@ import com.babylonhealth.sympscraper.cleaner.CleanerUtil;
  * @author Andrej
  *
  */
-public class SymptomExtractor implements Extractor {
+public class SimpleSymptomExtractor implements Extractor {
 
 	private final String SYMPTOMS_FILENAME = "resources/symptoms.txt";
 	private final Set<String> symptoms;
 
-	public SymptomExtractor() {
+	public SimpleSymptomExtractor() {
 		this.symptoms = new HashSet<String>();
 
 		// Read in symptoms into the hash set
@@ -42,19 +42,22 @@ public class SymptomExtractor implements Extractor {
 
 	@Override
 	public List<String> extract(List<Element> elements) {
+		// To hold our symptoms
 		List<String> extractedSymptoms = new ArrayList<String>();
 
 		// Clean elements using a cleaner
 		String text = CleanerUtil.simpleCleaner(elements);
 
 		// This is a very simple symptom extractor - it just matches words found
-		// in symptom.txt and return them
+		// in symptom.txt and returns them
 		for (String word : text.split(" ")) {
-			if (symptoms.contains(word)) {
-				extractedSymptoms.add(word);
+			if (symptoms.contains(word.trim())) {
+				if (!extractedSymptoms.contains(word)) {
+					extractedSymptoms.add(word);
+				}
 			}
 		}
-		
+
 		return extractedSymptoms;
 	}
 

@@ -16,10 +16,10 @@ public class ScraperUtil {
 	private static final String[] supportedUrls = { "nhs.uk" };
 
 	/**
-	 * Returns correct scraper to be used given a url.
+	 * Returns correct scraper to be used given a url or null otherwise.
 	 * 
 	 * @param url
-	 * @return scraper type
+	 * @return scraper type, null otherwise
 	 * @throws URISyntaxException
 	 */
 	public static ScraperType matchScraperType(String url) throws URISyntaxException {
