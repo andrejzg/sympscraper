@@ -15,6 +15,13 @@ import java.util.regex.Pattern;
 public class ScraperUtil {
 	private static final String[] supportedUrls = { "nhs.uk" };
 
+	/**
+	 * Returns correct scraper to be used given a url.
+	 * 
+	 * @param url
+	 * @return scraper type
+	 * @throws URISyntaxException
+	 */
 	public static ScraperType matchScraperType(String url) throws URISyntaxException {
 		url = url.toLowerCase();
 		String domain = getDomainName(url);
@@ -30,21 +37,38 @@ public class ScraperUtil {
 		return null;
 	}
 
+	/**
+	 * Returns the domain name from a url or null if undefined.
+	 * 
+	 * @param url
+	 * @return domain name or null if undefined
+	 * @throws URISyntaxException
+	 */
 	public static String getDomainName(String url) throws URISyntaxException {
 		URI uri = new URI(url);
 		String domain = uri.getHost();
-		return domain.startsWith("www.") ? domain.substring(4) : domain;
+		if (domain != null) {
+			return domain.startsWith("www.") ? domain.substring(4) : domain;
+		}
+		return null;
 	}
 
+	/**
+	 * A method used to extract the (health) condition from a NHS url.
+	 * 
+	 * @param url
+	 * @return health condition
+	 * @throws URISyntaxException
+	 */
 	public static String extractConditionFromUrl(String url) throws URISyntaxException {
-		ScraperType scraperType = matchScraperType(url);
+		ScraperType scraperType = matchScraperType(url.toLowerCase());
 
 		if (scraperType == ScraperType.NHS_PAGE_SCRAPER) {
 			Pattern conditionPattern = Pattern.compile(".+?conditions\\/(.+?)\\/");
-			Matcher m = conditionPattern.matcher(url);
+			Matcher m = conditionPattern.matcher(url.toLowerCase());
 
 			if (m.find()) {
-				return m.group(1).toLowerCase().replace("-", " ");
+				return m.group(1).replace("-", " ");
 			}
 
 		}

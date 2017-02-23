@@ -10,7 +10,7 @@ public class ScraperFactory {
 	public static Scraper make(ScraperType scraperType) {		
 		switch (scraperType) {
 		case NHS_PAGE_SCRAPER:
-			return (Scraper) new NhsScraper();
+			return (Scraper) new NhsSimpleScraper();
 		default:
 			return null;
 		}
