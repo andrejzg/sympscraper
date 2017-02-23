@@ -25,7 +25,7 @@ $ java -jar sympscraper-0.0.1.jar -i my_urls.txt
 
 Simply download **sympscraper.0.0.1.jar** from this repository. 
 
-To build from source, download the repository to a local machine and run `mvn build` (I've been having some issues with getting maven to build on another machine :sleepy: - stay tuned for a fix.)
+To build from source, download the repository to a local machine and run `mvn build`.
 
 ## How sympscraper works
 
