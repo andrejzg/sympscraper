@@ -23,8 +23,12 @@ $ java -jar sympscraper-0.0.1.jar -i my_urls.txt
 
 ## Installation
 
-Simply download **sympscraper.0.0.1.jar** from this repository. 
-
+1. Download this repository to a local machine.
+2. cd into `symscraper/`
+3. run `mvn package`
+4. cd into 'target/'
+5. Run `$ java -jar sympscraper-0.0.1-jar-with-dependencies.jar -u http://www.nhs.uk/Conditions/Glue-ear/Pages/Symptoms.aspx`.1
+1. Download this repository to a local machine.
 To build from source, download the repository to a local machine and run `mvn build`.
 
 ## How sympscraper works
