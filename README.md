@@ -1,6 +1,6 @@
 # sympscraper - a lightweight symptom scraper
 
-**sympscraper** is a Java command line library that allows you to scrape and extract symptom entities from medical web pages.
+**sympscraper** is a Java command line program that allows you to scrape and extract symptom entities from medical web pages.
 
 ## Example Usage
 **sympscraper** accepts urls with its -u flag. Multiple urls can be processed if a file containing them is passed using the -i flag.
